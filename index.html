@@ -1,0 +1,917 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Математическая логика и теория алгоритмов</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+		<link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/rubiks-cube.png"/>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+
+		<style>
+			h1 {
+					font-size: 3.0em !important;
+				}
+		</style>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+					<section class="center" data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							Математическая логика и теория алгоритмов
+							==============================================
+							Note:
+							Заголовок
+						</script>
+					</section>
+
+					<section class="center" data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							Математическая логика
+							==============================================
+							Note:
+						</script>
+					</section>
+	
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Определение
+	
+							Логика высказываний (пропозициональная логика) — это раздел символической логики,
+							 изучающий сложные высказывания, образованные из простых, и их взаимоотношения.
+							 
+							Note:
+							
+						</script>
+					</section>
+	
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Определение
+	
+							В отличие от логики предикатов, пропозициональная логика не рассматривает внутреннюю 
+							структуру простых высказываний, она лишь учитывает, с помощью каких союзов и в каком порядке простые высказывания сочленяются в сложные.
+							Note:
+							
+						</script>
+					</section>
+	
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Определение
+	
+							Под высказыванием принято понимать повествовательное предложение,
+							которое является либо истинным, либо ложным, но не тем и другим сразу.
+					
+							Note:
+							
+						</script>
+					</section>
+
+					<section class="center" data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							Логические операции в классической логике
+							-------------------------
+							Note:
+						</script>
+					</section>
+
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Коньюкция
+	
+							Конъюнкция  — логическая операция, по смыслу максимально приближенная к союзу «и».
+							Наиболее часто встречаются следующие обозначения для операции конъюнкции:
+							$$ a \land b \kern{7px} a \cdot b \kern{7px}
+							a \And \And b \kern{7px} a \And b \kern{7px}
+							a \mathrm {AND} b \kern{7px} min(a,b)$$
+							
+							Note:
+	
+						</script>
+					</section>
+	
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Дизъюнкция
+	
+							Дизъюнкция —  логическая операция, по своему применению максимально приближённая к союзу «или» в смысле «или то, или это, или оба сразу».
+							Наиболее часто встречаются следующие обозначения для операции дизъюнкции:
+							$$ a \vee b \kern{7px} a || b \kern{7px}
+							a | b \kern{7px} a \mathrm {OR} b \kern{7px} max(a,b)$$
+							
+							Note:
+	
+						</script>
+					</section>
+				
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Инверсия
+	
+							Инверсия -  это логическое отрицание,  делает истинное высказывание ложным и,
+							 наоборот, ложное — истинным.		
+							Обозначается символами:
+							$$ \neg A \kern{10px} \sim A \kern{10px} !A$$
+							Note:
+	
+						</script>
+					</section>
+	
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Импликация 
+	
+							Импликация  — бинарная логическая связка, по своему применению приближенная 
+							к союзам «если…, то…».
+							$$ \Rightarrow \kern{10px} \to \kern{10px} \supset \kern{10px} \implies$$
+					
+							Note:
+	
+						</script>
+					</section>
+	
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Эквиваленция
+	
+							Эквиваленция — это логическое выражение, которое является истинным тогда, 
+							когда оба простых логических выражения имеют одинаковую истинность.
+
+							$$\Leftrightarrow \kern{10px} \equiv \kern{10px} \leftrightarrow $$
+	
+							Note:
+	
+						</script>
+					</section>
+	
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Исключающее или
+							Исключающее «или»  (сложение по модулю 2, XOR, строгая дизъюнкция) — булева функция, а также логическая и битовая операция,
+							в случае двух переменных результат выполнения операции истинен тогда и только тогда, 
+							когда один из аргументов истинен, а другой — ложен.
+			
+							$$\oplus \kern{10px} \veebar \kern{10px} XOR$$
+					
+							Note:
+	
+						</script>
+					</section>
+	
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Условная Дизъюнкция
+							Условная дизъюнкция — тернарная (имеющая 3 операнда) логическая операция. Результат условной дизъюнкции аналогичен результату более 
+							общей тернарной условной операции (if o1 then o2 else o3), которая в том или ином виде используется в большинстве языков программирования 
+							как один из способов реализации ветвления в алгоритмах.
+			
+							$$(q \to p) \land (\neg q \to r)$$
+					
+							Note:
+	
+						</script>
+					</section>
+	
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Стрелка Пирса
+							
+	
+							Стрелка Пирса — бинарная логическая операция,
+							 булева функция над двумя переменными. эквивалентна операции ИЛИ-НЕ, обычно обозначаемая ↓ \
+							 Высказывание «X ↓ Y» означает «(не X) и (не Y)», или, что то же самое, «не (X или Y)»
+							 <!-- $${\overline {x+y}}$$ -->
+					
+							Note:
+	
+						</script>
+					</section>
+
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Штрих Шеффера
+							Штрих Шеффера — бинарная логическая операция, 
+							булева функция над двумя переменными.		
+							Обычно обозначается | или ↑, эквивалентен операции И-НЕ.
+							высказывание X | Y означает, что X и Y несовместны, то есть не являются истинными одновременно. От перемены мест операндов результат операции не изменяется.
+							Note:
+	
+						</script>
+					</section>
+
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Таблица истинности
+							Таблица истинности — таблица, описывающая логическую функцию. Под «логической функцией» в данном случае понимается функция, 
+							у которой значения переменных (параметров функции) и значение самой функции выражают логическую истинность. 
+							Например, в двузначной логике они могут принимать значения «истина» либо «ложь»
+							Note:
+	
+						</script>
+					</section>
+
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Примеры высказываний
+							1. 45 кратно 3 и 42 кратно 3\
+								$A \land B$, где $A$ = "45  кратно  3", $B$ = "42  кратно  3"
+							2. 45 кратно 3 и 12 не кратно 3\
+							$A \land \neg B$, где $A$ = "45  кратно  3", $B$ = "12  кратно  3"
+							3. $2 \leqslant 5$\
+							$A \vee B$, где $A$ = "2 < 5", $B$ = "2 = 5"
+							4. 	Если 212 делится на 3 и на 4, то 212 делится на 12\
+							$(A \land B) \to C$, где $A$ = "212 делится на 3", $В$ = "212 делится на 4" и $С$ = "делится на 12"
+							Note:
+	
+						</script>
+					</section>
+					
+					<section>
+						<h3>Генерация таблиц истинности</h3>
+						<input type="button" value="Клик" id="click">
+						<input type="text"  id="expression" placeholder="Введите выражение">
+						<form id="form1">
+						<p>!A - Инверсия<br>
+						A|B - Дизьюнкция<br>
+						A&B - Коньюнкция<br>
+						A^B - Исключающее «или»<br>
+						A→B = !A|B - Имликация<br>
+						A↔B = (!A&!B)|(A&B) - Эквиваленция<br>
+						A↑B = !(A&B) - Штрих Шеффера<br>
+						A↓B = !(A|B) - Стрелка Пирса<br>
+						(A|B)&(!A|B) - Условная дизъюнкция</p>
+						</form>
+						<div class="container"></div>
+					</section>
+
+				<section class="center" data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						Теория алгоритмов
+						==============================================
+						Note:
+					</script>
+				</section>
+
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Определение алгоритма
+							Алгоритм — конечная совокупность точно заданных правил решения некоторого класса задач или набор инструкций, 
+							описывающих порядок действий исполнителя для решения определённой задачи. 
+							Note:
+	
+						</script>
+					</section>
+
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Сложность алгоритма
+							Сложность алгоритма - это количественная характеристика, которая говорит о том, сколько времени, либо какой объём памяти потребуется для выполнения алгоритма.
+
+							Note:
+	
+						</script>
+					</section>
+
+					<section class="center" data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							 Распространенные сложности алгоритмов
+							 -----------------
+							Note:
+						</script>
+					</section>
+
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Константная - O(1)
+							Означает, что вычислительная сложность алгоритма не зависит от входных данных. Однако, это не значит, 
+							что алгоритм выполняется за одну операцию или требует очень мало времени. Это означает, что время не зависит от входных данных.
+							Note:
+	
+						</script>
+					</section>
+
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Линейная - O(n)
+							Означает, что сложность алгоритма линейно растёт с увеличением входных данных. Другими словами, 
+							удвоение размера входных данных удвоит и необходимое время для выполнения алгоритма.
+
+							Такие алгоритмы легко узнать по наличию цикла по каждому элементу массива.
+							Note:
+	
+						</script>
+					</section>
+
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Логарифмическая - O(log n)
+							Означает, что сложность алгоритма растёт логарифмически с увеличением входных данных. Другими словами это такой алгоритм, 
+							где на каждой итерации берётся половина элементов.
+
+							К алгоритмам с такой сложностью относятся алгоритмы типа “Разделяй и Властвуй” (Divide and Conquer), например бинарный поиск.
+							Note:
+	
+						</script>
+					</section>
+
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Линеарифметическая или линеаризованная - O(n * log n)
+							Означает, что удвоение размера входных данных увеличит время выполнения чуть более, чем вдвое.
+
+							Примеры алгоритмов с такой сложностью: Сортировка слиянием или множеством n элементов.
+							Note:
+	
+						</script>
+					</section>
+
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Квадратичная - O(n2), O(n^2)
+							Означает, что удвоение размера входных данных увеличивает время выполнения в 4 раза. Например, 
+							при увеличении данных в 10 раз, количество операций (и время выполнения) увеличится примерно в 100 раз. 
+							Если алгоритм имеет квадратичную сложность, то это повод пересмотреть необходимость использования данного алгоритма.
+							 Но иногда этого не избежать.
+
+							Такие алгоритмы легко узнать по вложенным циклам.
+							Note:
+	
+						</script>
+					</section>
+
+					<section class="center" data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							Алгоритмы сортировок
+							-------------------------
+							Note:
+						</script>
+					</section>
+
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Сортировка пузырьком
+							Сортировка пузырьком — один из самых известных алгоритмов сортировки. Здесь нужно последовательно сравнивать значения соседних 
+							элементов и менять числа местами, если предыдущее оказывается больше последующего. Таким образом элементы с большими значениями 
+							оказываются в конце списка, а с меньшими остаются в начале.
+
+							Сложность алгоритма: $O(n^{2})$.
+							Note:
+	
+						</script>
+					</section>
+
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Сортировка вставками
+							При сортировке вставками массив постепенно перебирается слева направо. При этом каждый последующий элемент размещается так, 
+							чтобы он оказался между ближайшими элементами с минимальным и максимальным значением.
+
+							Сложность алгоритма: $O(n^{2})$.
+							Note:
+	
+						</script>
+					</section>
+
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Быстрая сортировка
+							Этот алгоритм состоит из трёх шагов. Сначала из массива нужно выбрать один элемент — его обычно называют опорным. Затем другие 
+							элементы в массиве перераспределяют так, чтобы элементы меньше опорного оказались до него, а большие или равные — после. 
+							А дальше рекурсивно применяют первые два шага к подмассивам справа и слева от опорного значения.
+
+							Cложность алгоритма: $O(n\log {n})$ — среднее время, $O(n^{2})$ — худший случай.
+							Note:
+	
+						</script>
+					</section>
+
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Сортировка Шелла
+							Сортировка Шелла — улучшение сортировки вставками. Сложность алгоритма меняется в зависимости от выбора последовательности длин промежутков;
+							 при определённом выборе, возможно обеспечить сложность $O(n^{\frac {4}{3}})$ или $O(n\log ^{2}{n})$.
+							Note:
+	
+						</script>
+					</section>
+
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Сортировка выбором 
+							Сортировка выбором — поиск наименьшего или наибольшего элемента и помещение его в начало или конец упорядоченного списка. 
+
+							Сложность алгоритма: $O(n^{2})$.
+							Note:
+	
+						</script>
+					</section>
+					
+					<section>
+						<h2>Сортировка массива</h2>
+						<form id="form">
+							<p>1. Пузырьковая сортировка</p>
+							<p>2. Сортировка вставками</p>
+							<p>3. Сортировка выбором</p>
+							<p>4. Сортировка Шелла</p>
+							<p>5. Пирамидальная сортировка</p>
+						<!-- <input type="text"  id="size" class=type-2 placeholder="Введите размерность массива"> -->
+						<input type="text"  id="number" placeholder="Выберите способ">
+						<input type="button" value="Клик" id="_size">
+					</form>
+						<br>
+						<output id="_result1"></output>
+					</section>
+
+					<section>
+						<h2>Время выполнения сортировки</h2>
+						<table>
+							<tr>
+								<td>Пузырьковая сортировка</td>
+								<td><output id="_result2"></output></td>
+							</tr>
+							<tr>
+								<td>Сортировка вставками</td>
+								<td><output id="_result3"></output></td>
+							</tr>
+							<tr>
+								<td>Сортировка выбором</td>
+								<td><output id="_result4"></output></td>
+							</tr>
+							<tr>
+								<td>Сортировка Шелла</td>
+								<td><output id="_result5"></output></td>
+							</tr>
+							<tr>
+								<td>Пирамидальная сортировка</td>
+								<td><output id="_result6"></output></td>
+							</tr>
+						</table>
+					</section>
+
+					<section class="center" data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							 # Исходный код программ
+	
+							Note:
+							Исходный код программ
+						</script>
+					</section>
+					
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Исходный код программ таблиц истинности
+							```
+							document.querySelector('#_size').onclick = () => {
+								Num=Number(document.querySelector('#number').value); 
+								n=Number(prompt("Введите размерность массива" ));
+								var m=new Array(n); 
+								let spisok="";
+								for(i=0;i< n ;i++)
+								{
+									m[i]=Number(prompt("Введите "+(i+1)+" элемент массива" ));
+								}
+				
+								function bubbleSortConcept2(arr) {
+									let swapped;
+									do {
+										Answers();
+										swapped = false;
+										console.log(arr);
+										arr.forEach((item, index) => {
+											if (item > arr[index + 1]) {
+												let temp = item;
+												arr[index] = arr[index + 1];
+												arr[index + 1] = temp;
+												swapped = true;
+											}
+										})
+									} while (swapped);
+								}
+				
+								function Answers() {
+									let x="[";
+										for(i=0;i< n-1 ;i++) {
+										x+=m[i]+", ";
+										}
+										x+=m[n-1]+"]";
+										spisok+=x+'<br>';
+								};
+				
+								function InsertionSort(A)      
+								{                              
+									var n = A.length;
+									for (var i = 0; i < n; i++)
+										 { 
+											console.log(A);
+											var v = A[ i ], j = i-1;
+											 while (j >= 0 && A[j] > v)
+											{ A[j+1] = A[j]; j--; }
+											 A[j+1] = v;
+										 }                    
+										Answers(); 
+								}
+								
+								function SelectionSort(A)       
+								{                               
+									var n = A.length;
+									for (var i = 0; i < n-1; i++){ 
+										Answers(); 
+										console.log(A);
+										var min = i;
+										 for (var j = i+1; j < n; j++){ 
+											if (A[j] < A[min]) min = j; 
+										} 
+										 var t = A[min]; A[min] = A[ i ]; A[ i ] = t;
+									 }           
+									 Answers();          
+								}
+				
+								function ShellSort(A)
+								{
+									var n1 = A.length, i = Math.floor(n/2);
+									while (i > 0)
+									 { 
+										Answers(); 
+										console.log(A);
+										 for (var j = 0; j < n1; j++)
+										{ var k = j, t = A[j];
+											 while (k >= i && A[k-i] > t)
+											 { A[k] = A[k-i]; k -= i; }
+											A[k] = t;
+										}
+										i = (i==2) ? 1 : Math.floor(i*5/11);
+									 }
+									 Answers(); 
+									 console.log(A);
+								}
+				
+								function HeapSort(A) {
+									if (A.length == 0) return [];
+									var n = A.length, i = Math.floor(n/2), j, k, t;
+									while (true)
+									{ if (i > 0) t = A[--i];
+										else { n--;
+										 if (n == 0) return A;
+										 t = A[n];  A[n] = A[0];
+									 }        
+										j = i;  k = j*2+1;
+										while (k < n)
+										 { if (k+1 < n && A[k+1] > A[k]) k++;
+											 if (A[k] > t)
+											{ A[j] = A[k];  j = k;  k = j*2+1; }
+											 else break;
+										 }
+										A[j] = t; 
+										Answers();
+										console.log(A);
+									}
+								}
+				
+								function an(){
+									document.querySelector('#_result1').innerHTML = spisok;
+								}
+								
+								if(Num==1){
+									bubbleSortConcept2(m);
+									an();
+								}
+								else if (Num==2){
+									InsertionSort(m);
+									an();
+								}
+								else if (Num==3){
+									SelectionSort(m);
+									an();
+								}
+								else if (Num==4){
+									ShellSort(m)
+									an();
+								}
+								else {
+									HeapSort(m);
+									an();
+								}
+								document.querySelector('#_size').style.display = 'none';
+								document.querySelector('#form').style.display = 'none';
+							}
+							```
+							Note:
+	
+						</script>
+					</section>
+
+					<section data-markdown  data-separator-notes="^Note:">
+						<script type="text/template">
+							### Исходный код программ сортировок
+							```
+							document.querySelector('#click').onclick = () => {
+								N=document.querySelector('#expression').value
+								const
+								expr = N,
+								vars = [...new Set(expr.match(/[A-Z]+/g))];
+					
+					
+								const rows = [...Array(1 << vars.length)].map((n, i) => {
+								const
+									values = i.toString(2).padStart(vars.length, 0).split('').map(Number),
+									def = `const ${vars.map((n, i) => `${n} = ${values[i]}`).join(',')};`,
+									result = eval(`${def}${expr}`);
+					
+								return `<tr>${[...values, result].map(n => `<td>${n}</td>`).join('')}</tr>`;
+								}).join('');
+					
+					
+							document.querySelector('.container').innerHTML = `
+							<table>
+								<tr>${[...vars, 'result'].map(n => `<th>${n}</th>`).join('')}</tr>
+								${rows}
+							</table>`;
+							document.querySelector('#form1').style.display = 'none';
+							}
+							```
+							Note:
+	
+						</script>
+					</section>
+
+					<section
+						data-background-image="image/голова.jpg"
+						data-background-size="contain"
+						data-menu-title="Голова"
+					></section>
+				<section data-menu-title="Логика">
+					<img src="image/логика.png" alt="логика">
+				</section>
+					<section data-menu-title="Добрыня">
+						<img src="image/добрыня.jpg" alt="добрыня">
+					</section>
+					<section
+				data-background-image="image/шрек.png"
+				data-menu-title="Шрек"
+				></section>
+				<section
+				data-background-image="image/кот.jpg"
+				data-menu-title="кот"
+				></section>
+				<section data-menu-title="Заключительный слайд" class="center" data-markdown  data-separator-notes="^Note:">
+					<script type="text/template">
+						Спасибо за внимание
+					</script>
+
+					
+
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+
+		<script>
+			Reveal.initialize({
+				hash: true, // данная настройка позволит после перезагрузки презентации вернутся к последнему открытому слайду
+				center: false, //Привязываем вверх слайда к верху экрана
+				slideNumber: true, //Показываем номер страницы
+				controls: true, //Разрешаем управлять презентацией с помощью клавиатуры
+				//Так как меню старый плагин, загружаем его старым методом
+				dependencies: [
+					{
+						src: 'plugin/menu/menu.js'
+					},
+				],
+				//Настраиваем меню, показывая номер слайда и маркер пройденных слайдов
+				menu : {
+					numbers: true,
+					markers: true, 
+				},
+				//Дополнительно подключим KaTeX
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX]
+			});
+		</script>
+
+		<script>
+		document.querySelector('#click').onclick = () => {
+			N=document.querySelector('#expression').value
+			const
+  		expr = N,
+  		vars = [...new Set(expr.match(/[A-Z]+/g))];
+
+
+			const rows = [...Array(1 << vars.length)].map((n, i) => {
+  		const
+    		values = i.toString(2).padStart(vars.length, 0).split('').map(Number),
+    		def = `const ${vars.map((n, i) => `${n} = ${values[i]}`).join(',')};`,
+    		result = eval(`${def}${expr}`);
+
+  		return `<tr>${[...values, result].map(n => `<td>${n}</td>`).join('')}</tr>`;
+			}).join('');
+
+
+		document.querySelector('.container').innerHTML = `
+		<table>
+  		<tr>${[...vars, 'result'].map(n => `<th>${n}</th>`).join('')}</tr>
+  		${rows}
+		</table>`;
+		document.querySelector('#form1').style.display = 'none';
+		}
+		</script>
+
+		<script>
+			document.querySelector('#_size').onclick = () => {
+				Num=Number(document.querySelector('#number').value); 
+				n=Number(prompt("Введите размерность массива" ));
+				//n=document.querySelector('#number').value;
+				var m=new Array(n); 
+				let spisok="";
+				for(i=0;i<n;i++)
+				{
+					m[i]=Number(prompt("Введите "+(i+1)+" элемент массива" ));
+				}
+
+				function bubbleSortConcept2(arr) {
+  				let swapped;
+  				do {
+						Answers();
+    				swapped = false;
+    				console.log(arr);
+    				arr.forEach((item, index) => {
+      				if (item > arr[index + 1]) {
+        				let temp = item;
+        				arr[index] = arr[index + 1];
+        				arr[index + 1] = temp;
+       				 swapped = true;
+      				}
+    				})
+  				} while (swapped);
+				}
+
+				function Answers() {
+					let x="[";
+						for(i=0;i<n-1;i++) {
+						x+=m[i]+", ";
+						}
+						x+=m[n-1]+"]";
+						spisok+=x+'<br>';
+						//document.querySelector('#_result').innerHTML = x;
+				};
+
+				function InsertionSort(A)       // A - массив, который нужно
+				{                               // отсортировать по возрастанию.
+    			var n = A.length;
+    			for (var i = 0; i < n; i++)
+     				{ 
+							console.log(A);
+							Answers(); 
+							var v = A[ i ], j = i-1;
+       				while (j >= 0 && A[j] > v)
+        			{ A[j+1] = A[j]; j--; }
+       				A[j+1] = v;
+     				}                    
+					  Answers(); 
+				}
+				
+				function SelectionSort(A)       
+				{                               
+    			var n = A.length;
+    			for (var i = 0; i < n-1; i++){ 
+						Answers(); 
+						console.log(A);
+						var min = i;
+       			for (var j = i+1; j < n; j++){ 
+							if (A[j] < A[min]) min = j; 
+						} 
+       			var t = A[min]; A[min] = A[ i ]; A[ i ] = t;
+     			}           
+					 Answers();          
+				}
+
+				function ShellSort(A)
+				{
+    			var n1 = A.length, i = Math.floor(n/2);
+    			while (i > 0)
+     			{ 
+						Answers(); 
+						console.log(A);
+			 			for (var j = 0; j < n1; j++)
+        		{ var k = j, t = A[j];
+         			while (k >= i && A[k-i] > t)
+           		{ A[k] = A[k-i]; k -= i; }
+          		A[k] = t;
+        		}
+      			i = (i==2) ? 1 : Math.floor(i*5/11);
+     			}
+		 			Answers(); 
+		 			console.log(A);
+				}
+
+				function HeapSort(A) {
+    			if (A.length == 0) return [];
+    			var n = A.length, i = Math.floor(n/2), j, k, t;
+    			while (true)
+    			{ if (i > 0) t = A[--i];
+      			else { n--;
+             if (n == 0) return A;
+             t = A[n];  A[n] = A[0];
+           }        
+      			j = i;  k = j*2+1;
+      			while (k < n)
+       			{ if (k+1 < n && A[k+1] > A[k]) k++;
+        			 if (A[k] > t)
+          		{ A[j] = A[k];  j = k;  k = j*2+1; }
+         			else break;
+       			}
+      			A[j] = t; 
+						Answers();
+						console.log(A);
+    			}
+				}
+
+				function an(){
+					document.querySelector('#_result1').innerHTML = spisok;
+				}
+				
+				if(Num==1){
+					bubbleSortConcept2(m);
+					an();
+				}
+				else if (Num==2){
+					InsertionSort(m);
+					an();
+				}
+				else if (Num==3){
+					SelectionSort(m);
+					an();
+				}
+				else if (Num==4){
+					ShellSort(m);
+					an();
+				}
+				else {
+					HeapSort(m);
+					an();
+				}
+
+					var i1=0;
+					var time1=0,time2=0,time3=0,time4=0,time5=0;
+				while(i1<100){
+						const start1= new Date().getTime();
+						bubbleSortConcept2(m);
+						const end1 = new Date().getTime();
+						time1+=(end1-start1);
+
+						const start2= new Date().getTime();
+						InsertionSort(m);
+						const end2 = new Date().getTime();
+						time2+=(end2-start2);
+
+						const start3= new Date().getTime();
+						SelectionSort(m);
+						const end3 = new Date().getTime();
+						time3+=(end3-start3);
+
+						const start4= new Date().getTime();
+						ShellSort(m);
+						const end4 = new Date().getTime();
+						time4+=(end4-start4);
+
+						const start5= new Date().getTime();
+						HeapSort(m);
+						const end5 = new Date().getTime();
+						time5+=(end5-start5);
+					i1++;
+				}
+				document.querySelector('#_result2').innerHTML = (`${time1/100}ms`);
+				document.querySelector('#_result3').innerHTML = (`${time2/100}ms`);
+				document.querySelector('#_result4').innerHTML = (`${time3/100}ms`);
+				document.querySelector('#_result5').innerHTML = (`${time4/100}ms`);
+				document.querySelector('#_result6').innerHTML = (`${time5/100}ms`);
+				
+
+
+
+				//bubbleSortConcept2(m);
+				//Answers();
+				//an();
+
+				//Скрываем саму кнопку
+				document.querySelector('#_size').style.display = 'none';
+				//document.querySelector('#size').style.display = 'none';
+				document.querySelector('#form').style.display = 'none';
+			}
+		</script>
+	</body>
+</html>
