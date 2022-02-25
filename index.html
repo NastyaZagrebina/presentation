@@ -20,18 +20,47 @@
 			h1 {
 					font-size: 3.0em !important;
 				}
+				.seldemo {
+  border-radius: 10px;
+  padding:5px;
+  font-size:25px;
+}
+.btncls{
+    background-color:#F6B33C;
+    border: #2e6da4;
+  	font-family: Arial, Geneva, Arial, Helvetica,  sans-serif;
+	font-size: 15px;
+    color: #000;
+    letter-spacing: 1px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: normal;
+    
+    border-radius: 4px;
+    line-height: 1.5;
+    text-decoration:none;
+
+} 
 		</style>
+
 	</head>
 
 	<body>
 		<div class="reveal">
+  <!-- src="https://img.icons8.com/material-rounded/24/4a90e2/overview-pages-1.png" class="img" -->
+			<button name="nubex" value="Nubex">
+				<img style="position: fixed; z-index: 30; font-size: 30px;
+				left: 60px; bottom: 9px;" id="noteswitch"  alt="" src="https://img.icons8.com/fluency-systems-regular/24/4a90e2/overview-pages-1.png" />
+				</button>
+
 			<div class="slides">
 					<section class="center" data-markdown  data-separator-notes="^Note:">
 						<script type="text/template">
 							Математическая логика и теория алгоритмов
 							==============================================
 							Note:
-							Заголовок
+							Заголовок \
+							Математическая логика и теория алгоритмов
 						</script>
 					</section>
 
@@ -40,6 +69,7 @@
 							Математическая логика
 							==============================================
 							Note:
+							Подзаголовок
 						</script>
 					</section>
 	
@@ -51,7 +81,7 @@
 							 изучающий сложные высказывания, образованные из простых, и их взаимоотношения.
 							 
 							Note:
-							
+							Определение логики высказываний
 						</script>
 					</section>
 	
@@ -62,7 +92,7 @@
 							В отличие от логики предикатов, пропозициональная логика не рассматривает внутреннюю 
 							структуру простых высказываний, она лишь учитывает, с помощью каких союзов и в каком порядке простые высказывания сочленяются в сложные.
 							Note:
-							
+							Определение логики высказываний
 						</script>
 					</section>
 	
@@ -74,7 +104,7 @@
 							которое является либо истинным, либо ложным, но не тем и другим сразу.
 					
 							Note:
-							
+							Определение логики высказываний
 						</script>
 					</section>
 
@@ -83,12 +113,13 @@
 							Логические операции в классической логике
 							-------------------------
 							Note:
+							Подзаголовок
 						</script>
 					</section>
 
 					<section data-markdown  data-separator-notes="^Note:">
 						<script type="text/template">
-							### Коньюкция
+							### Конъюнкция
 	
 							Конъюнкция  — логическая операция, по смыслу максимально приближенная к союзу «и».
 							Наиболее часто встречаются следующие обозначения для операции конъюнкции:
@@ -97,7 +128,7 @@
 							a \mathrm {AND} b \kern{7px} min(a,b)$$
 							
 							Note:
-	
+							Опрделение конъюнкции
 						</script>
 					</section>
 	
@@ -111,7 +142,7 @@
 							a | b \kern{7px} a \mathrm {OR} b \kern{7px} max(a,b)$$
 							
 							Note:
-	
+							Определение дизъюнкции
 						</script>
 					</section>
 				
@@ -124,7 +155,7 @@
 							Обозначается символами:
 							$$ \neg A \kern{10px} \sim A \kern{10px} !A$$
 							Note:
-	
+							Определение инверсии
 						</script>
 					</section>
 	
@@ -137,7 +168,7 @@
 							$$ \Rightarrow \kern{10px} \to \kern{10px} \supset \kern{10px} \implies$$
 					
 							Note:
-	
+							Опрделение импликации
 						</script>
 					</section>
 	
@@ -151,7 +182,7 @@
 							$$\Leftrightarrow \kern{10px} \equiv \kern{10px} \leftrightarrow $$
 	
 							Note:
-	
+							Определение эквиваленции
 						</script>
 					</section>
 	
@@ -165,7 +196,7 @@
 							$$\oplus \kern{10px} \veebar \kern{10px} XOR$$
 					
 							Note:
-	
+							Опрделение исключающего или
 						</script>
 					</section>
 	
@@ -179,7 +210,7 @@
 							$$(q \to p) \land (\neg q \to r)$$
 					
 							Note:
-	
+							Определение условной дизъюнкции
 						</script>
 					</section>
 	
@@ -194,7 +225,7 @@
 							 <!-- $${\overline {x+y}}$$ -->
 					
 							Note:
-	
+							Определение стрелки Пирса
 						</script>
 					</section>
 
@@ -206,7 +237,7 @@
 							Обычно обозначается | или ↑, эквивалентен операции И-НЕ.
 							высказывание X | Y означает, что X и Y несовместны, то есть не являются истинными одновременно. От перемены мест операндов результат операции не изменяется.
 							Note:
-	
+							Определение штрихф Шеффера
 						</script>
 					</section>
 
@@ -217,7 +248,7 @@
 							у которой значения переменных (параметров функции) и значение самой функции выражают логическую истинность. 
 							Например, в двузначной логике они могут принимать значения «истина» либо «ложь»
 							Note:
-	
+							Определение таблицы истинности
 						</script>
 					</section>
 
@@ -233,33 +264,54 @@
 							4. 	Если 212 делится на 3 и на 4, то 212 делится на 12\
 							$(A \land B) \to C$, где $A$ = "212 делится на 3", $В$ = "212 делится на 4" и $С$ = "делится на 12"
 							Note:
-	
+							1. 45 кратно 3 и 42 кратно 3\
+								$A \land B$, где $A$ = "45  кратно  3", $B$ = "42  кратно  3"
+							2. 45 кратно 3 и 12 не кратно 3\
+							$A \land \neg B$, где $A$ = "45  кратно  3", $B$ = "12  кратно  3"
+							3. $2 \leqslant 5$\
+							$A \vee B$, где $A$ = "2 < 5", $B$ = "2 = 5"
+							4. 	Если 212 делится на 3 и на 4, то 212 делится на 12\
+							$(A \land B) \to C$, где $A$ = "212 делится на 3", $В$ = "212 делится на 4" и $С$ = "делится на 12"
 						</script>
 					</section>
 					
 					<section>
-						<h3>Генерация таблиц истинности</h3>
-						<input type="button" value="Клик" id="click">
-						<input type="text"  id="expression" placeholder="Введите выражение">
-						<form id="form1">
-						<p>!A - Инверсия<br>
-						A|B - Дизьюнкция<br>
-						A&B - Коньюнкция<br>
-						A^B - Исключающее «или»<br>
-						A→B = !A|B - Имликация<br>
-						A↔B = (!A&!B)|(A&B) - Эквиваленция<br>
-						A↑B = !(A&B) - Штрих Шеффера<br>
-						A↓B = !(A|B) - Стрелка Пирса<br>
-						(A|B)&(!A|B) - Условная дизъюнкция</p>
+						<h4>Генерация таблиц истинности</h4>
+				
+						<form action="" method="post" id="form1">
+							<div class="seldemo">
+							<label>Таблица истинности  </label>
+							<select name="selphp" id="expression">
+									<option value="!A">Инверсия</option>
+									<option value="A|B">Дизъюнкция</option>
+									<option value="A&B">Конъюнкция</option>
+									<option value="A^B">Исключающее или</option>
+									<option value="!A|B">Импликация</option>
+									<option value="(!A&!B)|(A&B)">Эквиваленция</option>
+									<option value="!(A&B)">Штрих Шеффера</option>
+									<option value="!(A|B)">Стрелка Пирса</option>
+									<option value="(A|B)&(!A|C)">Условная дизъюнкция</option>
+							</select>
+							</div>
 						</form>
-						<div class="container"></div>
+
+						<input type="submit" value="Клик" class="btncls" id="click">
+						
+						<div class="container">
+
+						</div>
+
+						<aside class="notes">
+							Выберите операцию и нажмите на кнопку
+						</aside>
 					</section>
 
 				<section class="center" data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
 						Теория алгоритмов
 						==============================================
-						Note:
+						Note: 
+						Подзаголовок
 					</script>
 				</section>
 
@@ -269,7 +321,7 @@
 							Алгоритм — конечная совокупность точно заданных правил решения некоторого класса задач или набор инструкций, 
 							описывающих порядок действий исполнителя для решения определённой задачи. 
 							Note:
-	
+							Определение алгоритма
 						</script>
 					</section>
 
@@ -279,7 +331,7 @@
 							Сложность алгоритма - это количественная характеристика, которая говорит о том, сколько времени, либо какой объём памяти потребуется для выполнения алгоритма.
 
 							Note:
-	
+							Сложность алгоритма
 						</script>
 					</section>
 
@@ -288,6 +340,7 @@
 							 Распространенные сложности алгоритмов
 							 -----------------
 							Note:
+							Подзаголовок
 						</script>
 					</section>
 
@@ -297,7 +350,7 @@
 							Означает, что вычислительная сложность алгоритма не зависит от входных данных. Однако, это не значит, 
 							что алгоритм выполняется за одну операцию или требует очень мало времени. Это означает, что время не зависит от входных данных.
 							Note:
-	
+							Константная - O(1)
 						</script>
 					</section>
 
@@ -309,7 +362,7 @@
 
 							Такие алгоритмы легко узнать по наличию цикла по каждому элементу массива.
 							Note:
-	
+							Линейная - O(n)
 						</script>
 					</section>
 
@@ -321,7 +374,7 @@
 
 							К алгоритмам с такой сложностью относятся алгоритмы типа “Разделяй и Властвуй” (Divide and Conquer), например бинарный поиск.
 							Note:
-	
+							Логарифмическая - O(log n)
 						</script>
 					</section>
 
@@ -332,7 +385,7 @@
 
 							Примеры алгоритмов с такой сложностью: Сортировка слиянием или множеством n элементов.
 							Note:
-	
+							Линеарифметическая или линеаризованная - O(n * log n)
 						</script>
 					</section>
 
@@ -346,7 +399,7 @@
 
 							Такие алгоритмы легко узнать по вложенным циклам.
 							Note:
-	
+							Квадратичная - O(n2), O(n^2)
 						</script>
 					</section>
 
@@ -355,6 +408,7 @@
 							Алгоритмы сортировок
 							-------------------------
 							Note:
+							Алгоритмы сортировок
 						</script>
 					</section>
 
@@ -367,7 +421,7 @@
 
 							Сложность алгоритма: $O(n^{2})$.
 							Note:
-	
+							Сортировка пузырьком
 						</script>
 					</section>
 
@@ -379,7 +433,7 @@
 
 							Сложность алгоритма: $O(n^{2})$.
 							Note:
-	
+							Сортировка вставками
 						</script>
 					</section>
 
@@ -392,7 +446,7 @@
 
 							Cложность алгоритма: $O(n\log {n})$ — среднее время, $O(n^{2})$ — худший случай.
 							Note:
-	
+							Быстрая сортировка
 						</script>
 					</section>
 
@@ -402,7 +456,7 @@
 							Сортировка Шелла — улучшение сортировки вставками. Сложность алгоритма меняется в зависимости от выбора последовательности длин промежутков;
 							 при определённом выборе, возможно обеспечить сложность $O(n^{\frac {4}{3}})$ или $O(n\log ^{2}{n})$.
 							Note:
-	
+							Сортировка Шелла
 						</script>
 					</section>
 
@@ -413,7 +467,7 @@
 
 							Сложность алгоритма: $O(n^{2})$.
 							Note:
-	
+							Сортировка выбором
 						</script>
 					</section>
 					
@@ -431,6 +485,12 @@
 					</form>
 						<br>
 						<output id="_result1"></output>
+						<aside class="notes">
+							1. Выбираете способ сортировки массива <br>
+							2. Вводите размерность массива <br>
+							3. Заполняете поэлементно массив <br>
+							4. Последовательная сортировка и результат на экране
+						</aside>
 					</section>
 
 					<section>
@@ -457,6 +517,9 @@
 								<td><output id="_result6"></output></td>
 							</tr>
 						</table>
+						<aside class="notes">
+							Время выполнения сортировки, введенного в предыдущем слайде, массива разными методами
+						</aside>
 					</section>
 
 					<section class="center" data-markdown  data-separator-notes="^Note:">
@@ -470,18 +533,21 @@
 					
 					<section data-markdown  data-separator-notes="^Note:">
 						<script type="text/template">
-							### Исходный код программ таблиц истинности
+							### Исходный код программ сортировок
 							```
 							document.querySelector('#_size').onclick = () => {
+								
 								Num=Number(document.querySelector('#number').value); 
-								n=Number(prompt("Введите размерность массива" ));
-								var m=new Array(n); 
+								n=Number(prompt("Введите размерность массива" )); //Ввод размерности массива
+								var m=new Array(n);  //Создание массива с заданой размерностью
 								let spisok="";
-								for(i=0;i< n ;i++)
+								//Заполнение массива
+								for(i=0;i< n ;i++) 
 								{
 									m[i]=Number(prompt("Введите "+(i+1)+" элемент массива" ));
 								}
-				
+								
+								//Функция пузырьковой сортировки
 								function bubbleSortConcept2(arr) {
 									let swapped;
 									do {
@@ -498,7 +564,8 @@
 										})
 									} while (swapped);
 								}
-				
+								
+								//Функция вывода сортирующихся массивов
 								function Answers() {
 									let x="[";
 										for(i=0;i< n-1 ;i++) {
@@ -507,7 +574,8 @@
 										x+=m[n-1]+"]";
 										spisok+=x+'<br>';
 								};
-				
+								
+								//Функция сортировки вставками
 								function InsertionSort(A)      
 								{                              
 									var n = A.length;
@@ -522,6 +590,7 @@
 										Answers(); 
 								}
 								
+								//Функиця сортировки выбором
 								function SelectionSort(A)       
 								{                               
 									var n = A.length;
@@ -537,6 +606,7 @@
 									 Answers();          
 								}
 				
+								//Функция сортировки Шелла
 								function ShellSort(A)
 								{
 									var n1 = A.length, i = Math.floor(n/2);
@@ -556,6 +626,7 @@
 									 console.log(A);
 								}
 				
+								//Функция пирамидальной сортировки 
 								function HeapSort(A) {
 									if (A.length == 0) return [];
 									var n = A.length, i = Math.floor(n/2), j, k, t;
@@ -577,11 +648,13 @@
 										console.log(A);
 									}
 								}
-				
+								
+								//Функция вывода результата на экран
 								function an(){
 									document.querySelector('#_result1').innerHTML = spisok;
 								}
 								
+								//В зависимости от ввода числа вызываем функции сортировки и вывода результата
 								if(Num==1){
 									bubbleSortConcept2(m);
 									an();
@@ -602,21 +675,22 @@
 									HeapSort(m);
 									an();
 								}
-								document.querySelector('#_size').style.display = 'none';
+								//Скрываем поле ввода и варианты сортировок
+								document.querySelector('#_size').style.display = 'none'; 
 								document.querySelector('#form').style.display = 'none';
 							}
 							```
 							Note:
-	
+							Исходный код программ сортировок
 						</script>
 					</section>
 
 					<section data-markdown  data-separator-notes="^Note:">
 						<script type="text/template">
-							### Исходный код программ сортировок
+							### Исходный код программ таблиц истинности
 							```
 							document.querySelector('#click').onclick = () => {
-								N=document.querySelector('#expression').value
+								N=document.querySelector('#expression').value //Считывает операцию
 								const
 								expr = N,
 								vars = [...new Set(expr.match(/[A-Z]+/g))];
@@ -631,17 +705,16 @@
 								return `<tr>${[...values, result].map(n => `<td>${n}</td>`).join('')}</tr>`;
 								}).join('');
 					
-					
+							//Вывод таблицы
 							document.querySelector('.container').innerHTML = `
 							<table>
 								<tr>${[...vars, 'result'].map(n => `<th>${n}</th>`).join('')}</tr>
 								${rows}
 							</table>`;
-							document.querySelector('#form1').style.display = 'none';
 							}
 							```
 							Note:
-	
+							Исходный код программ таблиц истинности
 						</script>
 					</section>
 
@@ -649,24 +722,33 @@
 						data-background-image="image/голова.jpg"
 						data-background-size="contain"
 						data-menu-title="Голова"
-					></section>
+					>
+					<aside class="notes">Алгоритмы, циклы, последовательность</aside>
+				</section>
 				<section data-menu-title="Логика">
 					<img src="image/логика.png" alt="логика">
+					<aside class="notes">Алгоритмы, циклы, последовательность</aside>
 				</section>
 					<section data-menu-title="Добрыня">
 						<img src="image/добрыня.jpg" alt="добрыня">
+						<aside class="notes">Вам ясно сказанное?</aside>
 					</section>
 					<section
 				data-background-image="image/шрек.png"
 				data-menu-title="Шрек"
-				></section>
+				>
+				<aside class="notes">Кек Шрек</aside>
+			</section>
 				<section
 				data-background-image="image/кот.jpg"
 				data-menu-title="кот"
-				></section>
+				>
+				<aside class="notes">Устал, уснул</aside>
+			</section>
 				<section data-menu-title="Заключительный слайд" class="center" data-markdown  data-separator-notes="^Note:">
 					<script type="text/template">
 						Спасибо за внимание
+						<aside class="notes">Конец. Спасибо за внимание.</aside>
 					</script>
 
 					
@@ -704,6 +786,29 @@
 		</script>
 
 		<script>
+
+			//Функция для включения и выключения заметок слайда
+			let showNodes = () => {
+				Reveal.configure({
+					//Навесим событие на клавишу D
+					//Покажим заметки
+					showNotes: (
+						Reveal.getConfig().showNotes ? 
+							false: true
+						)
+				});
+				return false;
+			}
+
+			//Открываем заметки или по кнопке или по клавише D
+			document.querySelector('#noteswitch').onclick = showNodes;
+				Reveal.configure({
+					keyboard: {
+						68: showNodes
+					}
+				});
+
+
 		document.querySelector('#click').onclick = () => {
 			N=document.querySelector('#expression').value
 			const
@@ -726,7 +831,7 @@
   		<tr>${[...vars, 'result'].map(n => `<th>${n}</th>`).join('')}</tr>
   		${rows}
 		</table>`;
-		document.querySelector('#form1').style.display = 'none';
+		//document.querySelector('#form1').style.display = 'none';
 		}
 		</script>
 
